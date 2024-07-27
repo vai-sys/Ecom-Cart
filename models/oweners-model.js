@@ -1,17 +1,34 @@
-const mongoose=require("mongoose");
+// const mongoose=require("mongoose");
 
 
-const ownerSchema=mongoose.Schema({
+// const ownerSchema=mongoose.Schema({
 
-    fullname:String,
-    email:String,
-    password:String,
-    products:{
-        type:Array,
-        default:[]
-    },
-    gstin:String,
-    picture:String
-})
+//     fullname:String,
+//     email:String,
+//     password:String,
+//     products:{
+//         type:Array,
+//         default:[]
+//     },
+//     gstin:String,
+//     picture:String
+// })
 
-module.exports=mongoose.model("owner",ownerSchema);
+// module.exports=mongoose.model("owner",ownerSchema);
+
+
+const mongoose = require("mongoose");
+
+const ownerSchema = new mongoose.Schema({
+  fullname: String,
+  email: String,
+  password: String,
+  products: {
+    type: Array,
+    default: []
+  },
+  gstin: String,
+  picture: String
+});
+
+module.exports = mongoose.model("Owner", ownerSchema);
