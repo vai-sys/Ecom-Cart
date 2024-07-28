@@ -13,4 +13,5 @@ router.get("/",isLoggedin,function(req,res){
 router.get("/shop",isLoggedin,function(req,res){
     res.render("shop");
 })
+
 module.exports=router;

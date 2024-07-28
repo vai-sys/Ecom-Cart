@@ -5,11 +5,6 @@ const router = express.Router();
 
 const ownerModel = require("../models/oweners-model"); 
 
-router.get("/", function(req, res) {
-    console.log("Received request for /owners");
-    res.send("hey it is working");
-});
-
 router.post("/create", async function(req, res) {
     try {
         let owners = await ownerModel.find();
@@ -35,5 +30,9 @@ router.post("/create", async function(req, res) {
         res.status(500).send("Internal Server Error");
     }
 });
+
+router.get("/admin",function(req,res){
+    
+})
 
 module.exports = router;
